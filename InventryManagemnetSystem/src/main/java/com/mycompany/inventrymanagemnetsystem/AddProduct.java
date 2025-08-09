@@ -4,7 +4,9 @@
  */
 package com.mycompany.inventrymanagemnetsystem;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class AddProduct {
 
@@ -32,10 +34,10 @@ public class AddProduct {
     ArrayList<Object> addProduct = new ArrayList<>();
 
     public List addNewProduct() {
-        
+
         System.out.println("=======");
         System.out.println("Enter Product Name: ");
-           name = sc.nextLine();
+        name = sc.next();
         addProduct.add(name);
         System.out.println("Enter Product Quantity: ");
         quantity = sc.nextInt();
@@ -50,22 +52,23 @@ public class AddProduct {
     public void viewProduct() {
         System.out.println("Product List");
         for (Object object : addProduct) {
-            System.out.println("Product Name" + object);
-            System.out.println("Product Quantity:" + object);
-            System.out.println("Product Price :" + object);
+            System.out.println(object);
 
         }
-        }
-         public void removeProduct() {
-        System.out.println("Product List");
-       addProduct.remove(quantity);
-  
     }
-           public List updateProduct() {
-        
+
+    public void removeProduct() {
+        System.out.println("Product List");
+        addProduct.removeFirst();
+        addProduct.removeFirst();
+        addProduct.removeFirst();
+    }
+
+    public List updateProduct() {
+
         System.out.println("=======");
         System.out.println("Enter Product Name: ");
-           name = sc.nextLine();
+        name = sc.nextLine();
         addProduct.add(name);
         System.out.println("Enter Product Quantity: ");
         quantity = sc.nextInt();
